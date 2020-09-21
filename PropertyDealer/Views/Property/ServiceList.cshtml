@@ -1,0 +1,25 @@
+﻿@model IEnumerable<PropertyDealer.Models.PropertyDetail>
+
+@{
+    ViewBag.Title = "ServiceList";
+}
+
+
+<div class="container">
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+                <div class="col-md-4">
+                    <h1> Property List: </h1>
+                    <img src="https://image.shutterstock.com/image-photo/beautiful-exterior-newly-built-luxury-260nw-529108441.jpg" class="img-thumbnail"/><br/>
+                   <h2>Property Area: @Html.DisplayFor(modelItem => item.Area)</h2>
+                                          <h3>Property Location</h3>  <h3>Property Location: @Html.DisplayFor(modelItem => item.Location)</h3>
+                                          <h4 class="btn btn-success">Property Price: @Html.DisplayFor(modelItem => item.Amount)</h4>
+                </div>
+        }
+
+        </div>
+
+</div>
+
